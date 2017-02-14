@@ -17,7 +17,7 @@ def get_data(filename):
     X_dataset=scaler.fit_transform(priceDataset[...,0])
     Y_dataset=scaler.fit_transform(priceDataset[...,1])
     X_train, X_test, y_train, y_test = train_test_split(
-        X_dataset, Y_dataset, test_size=0.3, random_state=1234)
+        X_dataset, Y_dataset, test_size=0.3)
     return scaler,X_train, X_test, y_train, y_test
 def build_model():
     model = Sequential()
